@@ -43,7 +43,7 @@ public class Engine {
 
 }
 
-public static void main(String[] args) {
-    Engine myengine= new Engine(FuelType.STEAM, 50);
-    System.out.println(myengine.getcurrentFuelLevel());
-}
+// public static void main(String[] args) {
+//     Engine myengine= new Engine(FuelType.STEAM, 50);
+//     System.out.println(myengine.getcurrentFuelLevel());
+// }
