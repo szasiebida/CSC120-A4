@@ -24,12 +24,12 @@ public class Car {
         return seatsLeft;
     }
 
-    public ArrayList<Passenger> addPassenger(ArrayList<Passenger> passengersOnboard, Passenger newPassenger){
-        passengersOnboard.add(newPassenger);
+    public ArrayList<Passenger> addPassenger(Passenger newPassenger){
+        this.passengersOnboard.add(newPassenger);
         return passengersOnboard;
     }
 
-    public ArrayList<Passenger> removePassenger(ArrayList<Passenger> passengersOnboard, Passenger oldPassenger){
+    public ArrayList<Passenger> removePassenger(Passenger oldPassenger){
         passengersOnboard.remove(oldPassenger);
         return passengersOnboard;
     }
