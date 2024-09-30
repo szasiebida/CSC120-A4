@@ -36,7 +36,7 @@ public class Engine {
             currentFuelLevel=currentFuelLevel-25;
         }
         else{
-            System.out.println("there is not enough have enough fuel");
+            System.out.println("there is not enough fuel");
         }
         
     }
