@@ -7,24 +7,22 @@ public class Train {
     //atributes 
     private Engine engine;
     ArrayList<Car> cars;
-    // FuelType fuelType;
-    // double fuelCapacity;
-    // private int passengerCapacity;
 
     //constructor 
-    public Train(FuelType fuelType, double fuelCapacity,int nCars, int passengerCapacity, Engine engine){
+    public Train(FuelType fuelType, double fuelCapacity,int nCars, int passengerCapacity){
         
-        this.engine=engine;
-
-        // this.fuelCapacity=fuelCapacity;
-        // this.passengerCapacity=Car.getCapacity();
+        this.engine=new Engine(fuelType, fuelCapacity);
+        this.cars= new ArrayList<>(nCars);
+        for (int i=0; i<nCars; i++){
+            cars.add(new Car(null, passengerCapacity));
+        }
 
     }
 
     //getters and methods
 
     public Engine getEngine() {
-        return this.engine;
+        return engine;
     }
 
     public Car getCar(int i) {
@@ -32,8 +30,13 @@ public class Train {
     }
 
     public int getMaxCapacity() {
-        return this.passengerCapacity;
+        int maxCapacity=0;
+        for (int i=0;i<cars.size(); i++){
+            maxCapacity+=cars.get(i).getCapacity();
+        }
+        return maxCapacity;
     }
+
     public int seatsRemaining() {
         int Max=getMaxCapacity();
         int 
