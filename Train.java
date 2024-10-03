@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import javax.print.attribute.standard.MediaSize.Engineering;
-
 public class Train {
 
     //atributes 
@@ -11,7 +9,7 @@ public class Train {
     //constructor 
     public Train(FuelType fuelType, double fuelCapacity,int nCars, int passengerCapacity){
         
-        this.engine=new Engine(fuelType, fuelCapacity);
+        this.engine = new Engine(fuelType, fuelCapacity);
         this.cars= new ArrayList<>(nCars);
         for (int i=0; i<nCars; i++){
             cars.add(new Car(null, passengerCapacity));
