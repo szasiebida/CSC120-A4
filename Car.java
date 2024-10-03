@@ -3,12 +3,12 @@ import java.util.ArrayList;
 public class Car {
 
     //attributes
-    ArrayList<Passenger> passengersOnboard;
+    private ArrayList<Passenger> passengersOnboard;
     private int maxCapacity;
 
     //constructor
-    public Car(ArrayList<Passenger> passengersOnboard, int maxCapacity){
-        this.passengersOnboard=passengersOnboard;
+    public Car(int maxCapacity){
+        this.passengersOnboard=new ArrayList<Passenger>();
         this.maxCapacity=maxCapacity;
     }
 
