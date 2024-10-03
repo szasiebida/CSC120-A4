@@ -9,10 +9,10 @@ public class Train {
     //constructor 
     public Train(FuelType fuelType, double fuelCapacity,int nCars, int passengerCapacity){
         
-        this.engine = new Engine(fuelType, fuelCapacity);
-        this.cars= new ArrayList<>(nCars);
+        this.engine = new Engine(fuelType,fuelCapacity);
+        this.cars= new ArrayList<Car>(nCars);
         for (int i=0; i<nCars; i++){
-            cars.add(new Car(null, passengerCapacity));
+            cars.add(new Car(passengerCapacity));
         }
 
     }
