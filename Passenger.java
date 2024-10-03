@@ -12,12 +12,20 @@ public class Passenger {
     }
 
     //methods 
-    public void boardCar(Car car){
-        car.addPassenger(this);
+    public void boardCar(Car c){
+        if (c.addPassenger(this)){
+            c.addPassenger(this);
+        } else {
+            System.out.println("passenger cannot be added car is full");
+        }
     }
 
-    public void getoffCar(Car car){
-        car.removePassenger(this);
+    public void getoffCar(Car c){
+        if (c.removePassenger(this)){
+            c.removePassenger(this);
+        } else{
+            System.out.println("passenger cannot be removed");
+        }
     }
     
 }

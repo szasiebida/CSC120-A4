@@ -1,3 +1,4 @@
+
 public class Engine {
 
     //attributes
@@ -26,7 +27,6 @@ public class Engine {
     }
 
     //methods 
-
     public void refuel(double currentFuelLevel){
         currentFuelLevel=maxFuelLevel;
     }
@@ -47,10 +47,10 @@ public class Engine {
 
 }
 
-    public static void main(String[] args) {
-        Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
-        while (myEngine.go()) {
-            System.out.println("Choo choo!");
-        }
-        System.out.println("Out of fuel.");
+public static void main(String[] args) {
+    Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
+    while (myEngine.go()) {
+        System.out.println("Choo choo!");
+    }
+    System.out.println("Out of fuel.");
 }
