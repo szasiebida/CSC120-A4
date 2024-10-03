@@ -7,23 +7,40 @@ public class Car {
     private int maxCapacity;
 
     //constructor
+    /**
+     * constructor for the car class
+     * @param maxCapacity the maximum capacity of the car
+     */
     public Car(int maxCapacity){
         this.maxCapacity=maxCapacity;
         this.passengersOnboard=new ArrayList<Passenger>(maxCapacity);
     }
 
     //getters 
+    /**
+     * getter for the maximum capacity because it's private 
+     * @return maxCapacity the maximum number of people that can be on the car
+     */
     public int getCapacity(){
         return this.maxCapacity;
     }
 
     //methods and such 
+    /**
+     * function that calculates the seats left based on the maximum capacity and the current number of passengers 
+     * @return seatsLeft the number of seats left on the car 
+     */
     public int seatsRemaining(){
         int seatsTaken=passengersOnboard.size();
         int seatsLeft=maxCapacity-seatsTaken;
         return seatsLeft;
     }
 
+    /**
+     * funtion that adds passengers to the car 
+     * @param newPassenger the passenger to be added to the car
+     * @return boolean true if the passenger was successfully added and falsi if not 
+     */
     public boolean addPassenger(Passenger newPassenger){
         if (seatsRemaining()>0){
             passengersOnboard.add(newPassenger);
@@ -33,6 +50,11 @@ public class Car {
         }
     }
 
+    /**
+     * function to remove the passenger from the car 
+     * @param oldPassenger the passenger that will be removed from the car
+     * @return boolean true if the passenger was successfully removed and false if it was not
+     */
     public boolean removePassenger(Passenger oldPassenger){
         if (passengersOnboard.contains(oldPassenger)){
             passengersOnboard.remove(oldPassenger);
@@ -42,6 +64,9 @@ public class Car {
         }
     }
 
+    /**
+     * function that prints the names of the passengers in the car 
+     */
     public void manifest(){
         int number=passengersOnboard.size();
         if (number>0){
