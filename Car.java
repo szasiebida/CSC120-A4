@@ -8,8 +8,8 @@ public class Car {
 
     //constructor
     public Car(int maxCapacity){
-        this.passengersOnboard=new ArrayList<Passenger>();
         this.maxCapacity=maxCapacity;
+        this.passengersOnboard=new ArrayList<Passenger>(maxCapacity);
     }
 
     //getters 
@@ -24,21 +24,32 @@ public class Car {
         return seatsLeft;
     }
 
-    public ArrayList<Passenger> addPassenger(Passenger newPassenger){
-        this.passengersOnboard.add(newPassenger);
-        return passengersOnboard;
+    public boolean addPassenger(Passenger newPassenger){
+        if (seatsRemaining()>0){
+            passengersOnboard.add(newPassenger);
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public ArrayList<Passenger> removePassenger(Passenger oldPassenger){
-        passengersOnboard.remove(oldPassenger);
-        return passengersOnboard;
+    public boolean removePassenger(Passenger oldPassenger){
+        if (passengersOnboard.contains(oldPassenger)){
+            passengersOnboard.remove(oldPassenger);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void manifest(ArrayList<Passenger> passengersOnboard){
         int number=passengersOnboard.size();
-        for (int i=0;i<number;i++){
-            System.out.println(passengersOnboard.get(i));
+        if (number>0){
+            for (int i=0;i<number;i++){
+                System.out.println(passengersOnboard.get(i));
+            } 
+        } else {
+            System.out.println("there's no one on board");
         }
     }
-
 }
