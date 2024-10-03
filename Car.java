@@ -42,7 +42,7 @@ public class Car {
         }
     }
 
-    public void manifest(ArrayList<Passenger> passengersOnboard){
+    public void manifest(){
         int number=passengersOnboard.size();
         if (number>0){
             for (int i=0;i<number;i++){

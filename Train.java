@@ -36,12 +36,18 @@ public class Train {
     }
 
     public int seatsRemaining() {
-        int Max=getMaxCapacity();
-        int 
+        int max=getMaxCapacity();
+        int seatsTaken = 0;
+        for (int i=0;i<cars.size(); i++){
+            seatsTaken+=cars.get(i).seatsRemaining();
+        }
+        return max-seatsTaken;
     }
     
-    public static void printManifest(){
-
+    public void printManifest(){
+        for (int i=0;i<cars.size(); i++){
+            cars.get(i).manifest();
+        } 
     }
 
 }
