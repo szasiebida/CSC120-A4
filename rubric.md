@@ -40,9 +40,9 @@ ___YES__ 1 pt: The `Train` class has all expected methods, making use of methods
 
 ## General Items:
 
-_____ 4 pts: Programs compile without errors or warnings
+___YES__ 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___YES__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 ___YES__ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
@@ -58,4 +58,4 @@ ___YES__ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
 ___YES__ 1 pt: All required files included with submission (including completed `rubric.md` file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment
+___YES__ 1 pt: `reflection.md` contains your reflection on the assignment

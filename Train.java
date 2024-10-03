@@ -59,12 +59,11 @@ public class Train {
      * @return int the seats remaining on the train 
      */
     public int seatsRemaining() {
-        int max=getMaxCapacity();
-        int seatsTaken = 0;
+        int seatsLeft = 0;
         for (int i=0;i<cars.size(); i++){
-            seatsTaken+=cars.get(i).seatsRemaining();
+            seatsLeft+=cars.get(i).seatsRemaining();
         }
-        return max-seatsTaken;
+        return seatsLeft;
     }
     
     /**
@@ -76,4 +75,15 @@ public class Train {
         } 
     }
 
+    /**
+     * main function for testing
+     * @param args
+     */
+    public static void main(String[] args) {
+        Train mytrain= new Train(FuelType.ELECTRIC,100,5,10 );
+        System.out.println(mytrain.engine);
+        System.out.println(mytrain.getMaxCapacity());
+        System.out.println(mytrain.seatsRemaining());
+
+    }
 }

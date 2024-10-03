@@ -44,5 +44,8 @@ public class Passenger {
             System.out.println("passenger cannot be removed");
         }
     }
-    
+    public static void main(String[] args) {
+        Passenger myperson= new Passenger("sofia");
+        System.out.println(myperson.name);
+    }
 }

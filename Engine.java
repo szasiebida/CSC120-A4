@@ -59,21 +59,18 @@ public class Engine {
         if (currentFuelLevel>25){
             currentFuelLevel=currentFuelLevel-25;
             System.out.println("you have"+ currentFuelLevel+ "gallons of fuel left");
-        } else{
-            System.out.println("there is not enough fuel");
-        }
-        if (currentFuelLevel>0){
             return true;
         } else{
+            System.out.println("there is not enough fuel");
             return false;
         }
     }
 
+    public static void main(String[] args) {
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
+        while (myEngine.go()) {
+            System.out.println("Choo choo!");
+        }
+        System.out.println("Out of fuel.");
+    }
 }
-// public static void main(String[] args) {
-//     Engine myEngine = new Engine(FuelType.ELECTRIC, 100.0);
-//     while (myEngine.go()) {
-//         System.out.println("Choo choo!");
-//     }
-//     System.out.println("Out of fuel.");
-// }

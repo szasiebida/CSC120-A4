@@ -77,4 +77,13 @@ public class Car {
             System.out.println("there's no one on board");
         }
     }
+    
+    /**
+     * main function for testing 
+     * @param args
+     */
+    public static void main(String[] args) {
+        Car mycar=new Car(40);
+        System.out.println(mycar.maxCapacity);
+    }
 }
