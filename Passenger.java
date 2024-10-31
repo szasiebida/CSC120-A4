@@ -26,10 +26,11 @@ public class Passenger {
      * @param c the car that the passenger is boaring
      */
     public void boardCar(Car c){
-        if (c.addPassenger(this)){
+        try {
             c.addPassenger(this);
-        } else {
-            System.out.println("passenger cannot be added car is full");
+            System.out.println("Passenger added successfully.");
+        } catch (Exception e) {
+            System.out.println("Passenger cannot be added; the car is full.");
         }
     }
 

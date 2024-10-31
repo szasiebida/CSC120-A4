@@ -71,7 +71,7 @@ public class Train {
      */
     public void printManifest(){
         for (int i=0;i<cars.size(); i++){
-            cars.get(i).manifest();
+            cars.get(i).printManifest();
         } 
     }
 
