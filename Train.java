@@ -4,7 +4,7 @@ public class Train {
 
     //atributes of the train class
     private Engine engine;
-    ArrayList<Car> cars;
+    private ArrayList<Car> cars;
 
     //constructor 
     /**
