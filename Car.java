@@ -42,7 +42,7 @@ public class Car {
      * @return boolean true if the passenger was successfully added and falsi if not 
      */
     public boolean addPassenger(Passenger newPassenger){
-        if (seatsRemaining()>0){
+        if (seatsRemaining()>0 && !passengersOnboard.contains(newPassenger)){
             passengersOnboard.add(newPassenger);
             return true;
         } else {
@@ -67,14 +67,14 @@ public class Car {
     /**
      * function that prints the names of the passengers in the car 
      */
-    public void manifest(){
+    public void printManifest(){
         int number=passengersOnboard.size();
         if (number>0){
             for (int i=0;i<number;i++){
-                System.out.println(passengersOnboard.get(i));
+                System.out.println(passengersOnboard.get(i).getname());
             } 
         } else {
-            System.out.println("there's no one on board");
+            System.out.println("This car is EMPTY.");
         }
     }
     
@@ -85,5 +85,8 @@ public class Car {
     public static void main(String[] args) {
         Car mycar=new Car(40);
         System.out.println(mycar.maxCapacity);
+        Passenger mypassenger= new Passenger("sofia");
+        mycar.addPassenger(mypassenger);
+        mycar.printManifest();
     }
 }
